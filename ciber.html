@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Basic</title>
+</head>
+<body>
+    <script>
+        // Exercici 1
+        console.log("Hola mundo");
+        
+        // Exercici 2
+        alert("Hola em dic Marta");
+        
+        // Exercici 3
+        let nom = 'Marta';
+        let cognom = 'Casal';
+        
+        console.log(nom, cognom);
+        
+        // Exercici 4
+        let num1 = 34;
+        let num2 = 78;
+        let suma = num1 + num2;
+        let resultat = 'La suma entre ' +num1+ ' i ' +num2+ ' és ' +suma;
+        
+        console.log(resultat);
+        
+        // Exercici 5
+        let nota_examen = 7;
+        
+        if (nota_examen >= 5) {
+            alert('Has aprovat! La teva nota és ' +nota_examen);
+        } else {
+            alert('Oh...has suspès. La teva nota és ' +nota_examen);
+        }
+        
+        // Exercici 6
+        let text = 'Tinc un cotxe de color';
+        let color = 'verd';
+        let i;
+        let text1 = "";
+
+        console.log(text, color);
+        
+        if (color == 'verd'){
+            color = 'blau';
+            console.log(text, color);
+        }
+        
+        for (i = 0; i < text.length; i++) {
+            if (text[i] == 'o') {
+                text1 += 'u';
+            } else {
+                text1 += text[i];
+            }
+        }
+
+        console.log(text1, color);
+
+        // Exercici 7
+        let objectes = ['taula', 'cadira', 'ordinador', 'llibreta'];
+        let j;
+
+        for (j = 0; j < objectes.length; j++) {
+            console.log("L'objecte " +objectes[j]+ " està a la posició " +[j]);
+        }
+
+        // Exercici 8
+        let operador, valor1, valor2, total; 
+        
+        function calculadora(valor1, valor2, operador) {
+            valor1 = parseInt(prompt("Introdueix un valor"));
+            valor2 = parseInt(prompt("Introdueix un altre valor"));
+            operador = prompt("Introdueix un operador: -, +, *");
+
+            switch (operador) {
+                case "+": 
+                        total = valor1 + valor2;
+                        break;
+                case "-": 
+                        total = valor1 - valor2;
+                        break;
+                case "*": 
+                        total = valor1 * valor2;
+                        break;
+                default: 
+                        total = "Hi ha hagut un error en algun paràmetre.";
+            }
+        }
+
+        calculadora();
+        console.log(total);
+    </script>
+</body>
+</html>
