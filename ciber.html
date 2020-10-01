@@ -37,27 +37,15 @@
         }
         
         // Exercici 6
-        let text = 'Tinc un cotxe de color';
-        let color = 'verd';
-        let i;
-        let text1 = "";
-
-        console.log(text, color);
+        let text = 'Tinc un cotxe de color verd';
         
-        if (color == 'verd'){
-            color = 'blau';
-            console.log(text, color);
-        }
+        console.log(text);
         
-        for (i = 0; i < text.length; i++) {
-            if (text[i] == 'o') {
-                text1 += 'u';
-            } else {
-                text1 += text[i];
-            }
-        }
+        console.log(text.replace('verd', 'blau'));
+        
+        console.log(text.replace(/o/g, 'u'));
 
-        console.log(text1, color);
+        
 
         // Exercici 7
         let objectes = ['taula', 'cadira', 'ordinador', 'llibreta'];
