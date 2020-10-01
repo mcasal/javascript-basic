@@ -45,8 +45,6 @@
         
         console.log(text.replace(/o/g, 'u'));
 
-        
-
         // Exercici 7
         let objectes = ['taula', 'cadira', 'ordinador', 'llibreta'];
         let j;
@@ -56,29 +54,28 @@
         }
 
         // Exercici 8
-        let operador, valor1, valor2, total; 
-        
-        function calculadora(valor1, valor2, operador) {
-            valor1 = parseInt(prompt("Introdueix un valor"));
-            valor2 = parseInt(prompt("Introdueix un altre valor"));
-            operador = prompt("Introdueix un operador: -, +, *");
+        function calculadora(operador, valor1, valor2) {
+            let resultat;
 
             switch (operador) {
-                case "+": 
-                        total = valor1 + valor2;
+                case "suma": 
+                        resultat = valor1 + valor2;
                         break;
-                case "-": 
-                        total = valor1 - valor2;
+                case "resta": 
+                        resultat = valor1 - valor2;
                         break;
-                case "*": 
-                        total = valor1 * valor2;
+                case "multiplicacio": 
+                        resultat = valor1 * valor2;
                         break;
                 default: 
-                        total = "Hi ha hagut un error en algun paràmetre.";
+                        resultat = "Hi ha hagut un error en algun paràmetre.";
             }
+
+            return resultat;
         }
 
-        calculadora();
+        let total = calculadora('resta', 40, 20);
+        
         console.log(total);
     </script>
 </body>
